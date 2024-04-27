@@ -3,9 +3,9 @@ package com.ijse.coursework.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.ijse.coursework.entity.User;
+import com.ijse.coursework.entity.Item;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface ItemRepository extends JpaRepository<Item, Long> {
 
 }

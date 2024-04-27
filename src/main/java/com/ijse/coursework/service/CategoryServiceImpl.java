@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ijse.coursework.entity.Category;
+import com.ijse.coursework.entity.Item;
 import com.ijse.coursework.repository.CategoryRepository;
 
 @Service
