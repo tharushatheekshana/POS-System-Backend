@@ -47,6 +47,7 @@ public class ItemController {
     public ResponseEntity<Item> addItem(@RequestBody ItemDto itemDto) {
         Item item = new Item();
         item.setName(itemDto.getName());
+        item.setSize(itemDto.getSize());
         item.setPrice(itemDto.getPrice());
         item.setQuantity(itemDto.getQuantity());
 
@@ -61,6 +62,7 @@ public class ItemController {
     public ResponseEntity<Object> updateItem(@PathVariable Long id, @RequestBody ItemDto itemdDto) {
         Item item = new Item();
         item.setName(itemdDto.getName());
+        item.setSize(itemdDto.getSize());
         item.setPrice(itemdDto.getPrice());
         item.setQuantity(itemdDto.getQuantity());
 

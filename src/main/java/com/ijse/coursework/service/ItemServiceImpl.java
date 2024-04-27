@@ -34,6 +34,7 @@ public class ItemServiceImpl implements ItemService {
             return null;
         }
         existItem.setName(item.getName());
+        existItem.setSize(item.getSize());
         existItem.setPrice(item.getPrice());
         existItem.setQuantity(item.getQuantity());
 

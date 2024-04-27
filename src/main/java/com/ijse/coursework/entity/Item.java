@@ -20,6 +20,8 @@ public class Item {
 
     private String name;
 
+    private String size;
+
     private Double price;
 
     private Integer quantity;
