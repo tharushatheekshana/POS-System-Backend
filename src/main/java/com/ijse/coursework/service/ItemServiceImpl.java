@@ -3,7 +3,6 @@ package com.ijse.coursework.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.ijse.coursework.entity.Item;
@@ -34,9 +33,9 @@ public class ItemServiceImpl implements ItemService {
             return null;
         }
         existItem.setName(item.getName());
-        existItem.setSize(item.getSize());
         existItem.setPrice(item.getPrice());
-        existItem.setQuantity(item.getQuantity());
+        existItem.setDescription(item.getDescription());
+        // existItem.setQuantity(item.getQuantity());
 
         return itemRepository.save(existItem);
     }
@@ -49,6 +48,11 @@ public class ItemServiceImpl implements ItemService {
     @Override
     public Item addItem(Item item) {
         return itemRepository.save(item);
+    }
+
+    @Override
+    public List<Item> getItemsByCategory(Long id) {
+        return itemRepository.findByCategoryId(id);
     }
 
 }

@@ -3,9 +3,9 @@ package com.ijse.coursework.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.ijse.coursework.entity.Order;
+import com.ijse.coursework.entity.Cart;
 
 @Repository
-public interface OrderRepository extends JpaRepository<Order, Long> {
-   
+public interface CartRepository extends JpaRepository<Cart, Long> {
+
 }

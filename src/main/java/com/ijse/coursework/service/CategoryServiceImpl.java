@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ijse.coursework.entity.Category;
-import com.ijse.coursework.entity.Item;
 import com.ijse.coursework.repository.CategoryRepository;
 
 @Service
@@ -33,6 +32,14 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public void deleteCategory(Long id) {
         categoryRepository.deleteById(id);
+    }
+
+    @Override
+    public Category updateCategory(Long id, Category category) {
+        Category existingCategory = categoryRepository.findById(id).orElse(null);
+        existingCategory.setName(category.getName());
+        return categoryRepository.save(existingCategory);
+
     }
 
 }
