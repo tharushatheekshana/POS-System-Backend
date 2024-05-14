@@ -31,6 +31,8 @@ public class Order {
 
     private LocalDateTime orderDate;
 
+    private Integer orderComplete;
+
     @OneToMany(mappedBy = "order")
     private List<OrderItem> orderItems;
 }

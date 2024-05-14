@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ijse.coursework.dto.LoginDto;
+import com.ijse.coursework.entity.User;
 import com.ijse.coursework.security.jwt.JwtUtils;
 
 @RestController
@@ -35,4 +36,5 @@ public class AuthController {
 
         return ResponseEntity.status(200).body(jwtToken);
     }
+
 }

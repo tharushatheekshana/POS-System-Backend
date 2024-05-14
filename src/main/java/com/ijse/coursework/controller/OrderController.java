@@ -59,6 +59,8 @@ public class OrderController {
         OrderItem orderItem = new OrderItem();
         orderItem.setQuantity(addItemDto.getQuantity());
 
+        order.setOrderComplete(addItemDto.getOrderComplete());
+
         OrderItem updatedOrderItem = orderService.updateOrderItem(orderItem);
 
         return ResponseEntity.status(200).body(updatedOrderItem);
