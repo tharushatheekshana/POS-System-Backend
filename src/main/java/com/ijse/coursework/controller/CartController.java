@@ -40,6 +40,7 @@ public class CartController {
         cart.setQuantity(cartDto.getQuantity());
         cart.setPrice(cartDto.getPrice());
         cart.setName(cartDto.getName());
+        cart.setImage(cartDto.getImage());
 
         Cart addCartItem = cartService.addCartItem(cart);
         return ResponseEntity.status(201).body(addCartItem);

@@ -1,5 +1,12 @@
-{"properties": [{
-  "name": "image.upload.directory",
-  "type": "java.lang.String",
-  "description": "A description for 'image.upload.directory'"
-}]}
+{"properties": [
+  {
+    "name": "image.upload.directory",
+    "type": "java.lang.String",
+    "description": "A description for 'image.upload.directory'"
+  },
+  {
+    "name": "app.secret",
+    "type": "java.lang.String",
+    "description": "A description for 'app.secret'"
+  }
+]}

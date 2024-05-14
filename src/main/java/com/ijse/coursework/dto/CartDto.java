@@ -10,5 +10,6 @@ public class CartDto {
     private String name;
     private double price;
     private int quantity;
+    private String image;
     private Double totalPrice;
 }

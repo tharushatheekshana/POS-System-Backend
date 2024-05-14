@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.ijse.coursework.entity.Category;
 import com.ijse.coursework.entity.StockCategory;
 
 @Service
