@@ -1,3 +1,16 @@
+INSERT INTO category (name) VALUES
+('Fried Rice'),
+('Fried Noodles'),
+('Nasi Goreng'),
+('Kottu'),
+('Soup'),
+('Chicken'),
+('Fish'),
+('Omelette'),
+('Vegetable'),
+('Chop Suey'),
+('Biryani');
+
 INSERT INTO item (description, name, price, category_id, image) VALUES
 ('Wok-tossed steamed rice with tender chicken, fluffy eggs, and fresh vegetables. A savory and satisfying classic.', 'Chicken Fried Rice', 850, 1, 'ChickenFriedRice.webp'),
 ('This is a classic fried rice dish that is packed with flavor from a variety of seafood ingredients. Common ingredients include shrimp, scallops, calamari, and mussels.', 'Seafood Fried Rice', 1050, 1, 'SeafoodFriedRice.jpg'),
@@ -29,3 +42,34 @@ INSERT INTO item (description, name, price, category_id, image) VALUES
 ('Mutton biryani is a flavorful rice dish made with tender mutton pieces, fragrant spices, and herbs.', 'Mutton Biryani', 450, 11, 'MuttonBiryani.jpg'),
 ('Seafood Biryani is a flavorful Indian rice dish made with seafood like fish, shrimp, and clams, aromatic spices, and fluffy basmati rice.', 'Seafood Biryani', 650, 11, 'SeafoodBiryani.jpg'),
 ('Vegetable Biryani is a flavorful rice dish made with aromatic basmati rice, vegetables, and fragrant spices.', 'Vegetable Biryani', 400, 11, 'VegetableBiryani.jpg');
+
+INSERT INTO stock_category (name)
+VALUES
+('Vegetables'),
+('Meat'),
+('Seafood'),
+('Grains'),
+('Baking'),
+('Dairy'),
+('Cooking Oil'),
+('Bakery'),
+('Condiments'),
+('Fruits'),
+('Herbs and Spices'),
+('Canned Goods'),
+('Frozen Foods'),
+('Snacks'),
+('Beverages'),
+('Desserts'),
+('Deli'),
+('Sauces'),
+('Gravies'),
+('Others');
+
+
+INSERT INTO stock (description, name, quantity, stock_category_id)
+VALUES
+('Fresh tomatoes from local farms', 'Tomatoes', '5 kg', 1),
+('Boneless, skinless chicken breast', 'Chicken Breast', '1.5 kg', 2),
+('White onions, perfect for salads and sauces', 'Onions', '2.5 kg', 1),
+('Fresh Atlantic salmon fillet', 'Salmon Fillet', '800 g', 3);
