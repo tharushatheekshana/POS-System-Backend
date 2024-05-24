@@ -64,7 +64,25 @@ public class WebSecurityConfiguration {
                 .csrf(csrf -> csrf.disable())
                 .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authorizeHttpRequests(auth -> auth.requestMatchers("/auth/***", "/swagger-ui/**","/v3/api-docs/**").permitAll().anyRequest().authenticated());
+                .authorizeHttpRequests(auth -> auth.requestMatchers(
+                        "/auth/***",
+                        "/swagger-ui/**",
+                        "/v3/api-docs/**",
+                        "/swagger-ui.html",
+                        "/swagger-ui/**",
+                        "/swagger-resources/**",
+                        "/webjars/**",
+                        "/v2/api-docs",
+                        "/v2/api-docs/**",
+                        "/configuration/ui",
+                        "/configuration/security",
+                        "/configuration/**",
+                        "/swagger-resources",
+                        "/swagger-resources/**",
+                        "/swagger-resources/configuration/ui",
+                        "/swagger-resources/configuration/security",
+                        "/swagger-resources/configuration/**").permitAll()
+                        .anyRequest().authenticated());
         httpSecurity.authenticationProvider(authenticationProvider());
 
         httpSecurity.addFilterBefore(authenticationJwtFilter(), UsernamePasswordAuthenticationFilter.class);
